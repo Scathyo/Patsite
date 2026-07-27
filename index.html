@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>patsite.de &ndash; Webdesign &amp; Hosting aus einer Hand</title>
+<meta name="description" content="patsite.de entwirft individuelle Websites, hostet sie zuverlässig und betreut sie dauerhaft. Viele Designs, ein Ansprechpartner &ndash; entdecken Sie unsere Referenzen.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar" id="topbar">
+  <a class="logo" href="#top">
+    <span class="logo-mark">PS</span>
+    <span class="logo-text">patsite.de</span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a class="logo" href="#top">
+        <span class="logo-mark">PS</span>
+        <span class="logo-text">patsite.de</span>
+      </a>
+      <p class="sidebar-tag">Webdesign &amp; Hosting aus einer Hand</p>
+    </div>
+
+    <nav class="side-nav" id="sideNav">
+      <a href="#designs" data-label="01">Designs</a>
+      <a href="#leistungen" data-label="02">Leistungen</a>
+      <a href="#referenzen" data-label="03">Referenzen</a>
+      <a href="#ablauf" data-label="04">Ablauf</a>
+      <a href="#preise" data-label="05">Preise</a>
+      <a href="#kontakt" data-label="06">Kontakt</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#kontakt" class="btn btn-primary btn-block">Projekt anfragen</a>
+      <ul class="sidebar-meta">
+        <li>📍 Musterstraße 1, Musterstadt</li>
+        <li>📞 0123 / 456 789</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content" id="top">
+
+    <section class="hero" id="hero">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>Webagentur &middot; seit 8 Jahren</p>
+      <h1>Ihre Website.<br>Viele Gesichter.<br><em>Ein Ansprechpartner.</em></h1>
+      <p class="hero-sub">patsite.de entwirft, baut und hostet Websites, die zu Ihrer Marke passen &ndash; von der ersten Skizze über das Design bis zur laufenden Betreuung.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn btn-primary">Projekt anfragen</a>
+        <a href="#designs" class="btn btn-text">Designs ansehen &rarr;</a>
+      </div>
+
+      <div class="hero-sticker" aria-hidden="true">
+        <div class="sticker-card">🎨</div>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>8+</strong><span>Jahre Erfahrung</span></div>
+        <div><strong>60+</strong><span>Projekte umgesetzt</span></div>
+        <div><strong>4.9★</strong><span>Kundenbewertung</span></div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Webdesign</span><span>&middot;</span>
+        <span>Hosting</span><span>&middot;</span>
+        <span>Wartung</span><span>&middot;</span>
+        <span>SEO</span><span>&middot;</span>
+        <span>Responsive Design</span><span>&middot;</span>
+        <span>Support</span><span>&middot;</span>
+        <span>Webdesign</span><span>&middot;</span>
+        <span>Hosting</span><span>&middot;</span>
+        <span>Wartung</span><span>&middot;</span>
+        <span>SEO</span><span>&middot;</span>
+        <span>Responsive Design</span><span>&middot;</span>
+        <span>Support</span><span>&middot;</span>
+      </div>
+    </section>
+
+    <section class="section" id="designs">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>Design-Vielfalt</p>
+      <h2>Ein Anbieter, viele Gesichter</h2>
+      <p class="section-intro">Diese Seite, die Sie gerade betrachten, ist eines von sechs kompletten Designs, die wir für Kunden umsetzen können. Wählen Sie eins aus oder lehnen Sie sich zurück &ndash; wir wechseln automatisch alle paar Sekunden.</p>
+
+      <div class="designs-control">
+        <button class="control-btn" id="prevTheme" aria-label="Vorheriges Design">&larr;</button>
+        <div class="control-label">
+          <span class="control-name" id="themeName">Aurora</span>
+          <span class="control-desc" id="themeDesc">Modern &amp; frisch</span>
+        </div>
+        <button class="control-btn" id="nextTheme" aria-label="Nächstes Design">&rarr;</button>
+        <button class="control-btn control-play" id="playPause" aria-label="Automatischen Wechsel pausieren">⏸</button>
+      </div>
+
+      <div class="swatch-grid" id="swatchGrid">
+        <button class="swatch-card" data-theme="aurora">
+          <span class="swatch-dots">
+            <span class="dot" style="background:#6D5DFC"></span>
+            <span class="dot" style="background:#17B99E"></span>
+            <span class="dot" style="background:#F5F3FF"></span>
+          </span>
+          <span class="swatch-name">Aurora</span>
+          <span class="swatch-desc">Modern &amp; frisch</span>
+        </button>
+        <button class="swatch-card" data-theme="midnight">
+          <span class="swatch-dots">
+            <span class="dot" style="background:#14111F"></span>
+            <span class="dot" style="background:#FFB454"></span>
+            <span class="dot" style="background:#8A7CFF"></span>
+          </span>
+          <span class="swatch-name">Midnight</span>
+          <span class="swatch-desc">Dunkel &amp; edel</span>
+        </button>
+        <button class="swatch-card" data-theme="sunset">
+          <span class="swatch-dots">
+            <span class="dot" style="background:#FF6B4A"></span>
+            <span class="dot" style="background:#FFC94A"></span>
+            <span class="dot" style="background:#FFF4EC"></span>
+          </span>
+          <span class="swatch-name">Sunset</span>
+          <span class="swatch-desc">Verspielt &amp; warm</span>
+        </button>
+        <button class="swatch-card" data-theme="mono">
+          <span class="swatch-dots">
+            <span class="dot" style="background:#17171B"></span>
+            <span class="dot" style="background:#2453FF"></span>
+            <span class="dot" style="background:#F7F7F8"></span>
+          </span>
+          <span class="swatch-name">Mono</span>
+          <span class="swatch-desc">Klar &amp; corporate</span>
+        </button>
+        <button class="swatch-card" data-theme="forest">
+          <span class="swatch-dots">
+            <span class="dot" style="background:#3F7D45"></span>
+            <span class="dot" style="background:#C9A15A"></span>
+            <span class="dot" style="background:#F3F6EF"></span>
+          </span>
+          <span class="swatch-name">Forest</span>
+          <span class="swatch-desc">Natürlich &amp; organisch</span>
+        </button>
+        <button class="swatch-card" data-theme="neon">
+          <span class="swatch-dots">
+            <span class="dot" style="background:#0A0A14"></span>
+            <span class="dot" style="background:#00E5FF"></span>
+            <span class="dot" style="background:#FF2ECC"></span>
+          </span>
+          <span class="swatch-name">Neon</span>
+          <span class="swatch-desc">Mutig &amp; futuristisch</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="leistungen">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>Leistungen</p>
+      <h2>Alles aus einer Hand</h2>
+
+      <div class="service-list">
+        <div class="service-row">
+          <span class="service-index">01</span>
+          <div class="service-body">
+            <h3>Webdesign</h3>
+            <p>Individuelles Design statt Templates von der Stange &ndash; abgestimmt auf Ihre Marke und Zielgruppe.</p>
+          </div>
+          <span class="service-icon">🎨</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">02</span>
+          <div class="service-body">
+            <h3>Hosting</h3>
+            <p>Schnelle, sichere Server mit SSL-Verschlüsselung, automatischen Backups und Uptime-Monitoring.</p>
+          </div>
+          <span class="service-icon">☁️</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">03</span>
+          <div class="service-body">
+            <h3>Wartung &amp; Support</h3>
+            <p>Regelmäßige Updates, Sicherheits-Patches und persönlicher technischer Support nach dem Launch.</p>
+          </div>
+          <span class="service-icon">🛠️</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">04</span>
+          <div class="service-body">
+            <h3>SEO-Grundoptimierung</h3>
+            <p>Saubere Struktur, Meta-Daten und schnelle Ladezeiten für bessere Sichtbarkeit bei Google.</p>
+          </div>
+          <span class="service-icon">🔍</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">05</span>
+          <div class="service-body">
+            <h3>Content-Pflege</h3>
+            <p>Auf Wunsch pflegen wir Texte, Bilder und Angebote laufend &ndash; Sie kümmern sich um Ihr Geschäft.</p>
+          </div>
+          <span class="service-icon">📝</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">06</span>
+          <div class="service-body">
+            <h3>Responsive Design</h3>
+            <p>Perfekte Darstellung auf Smartphone, Tablet und Desktop &ndash; von Anfang an mitgedacht.</p>
+          </div>
+          <span class="service-icon">📱</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="referenzen">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>Referenzen</p>
+      <h2>Einblicke in unsere Projekte</h2>
+      <p class="section-intro">Eine Auswahl an Websites, die wir umgesetzt haben. Die Vorschauen sind live &ndash; klicken Sie sich hinein.</p>
+
+      <div class="portfolio-grid">
+        <article class="portfolio-card">
+          <div class="preview-frame">
+            <iframe src="../friseur-glanz/index.html" title="Live-Vorschau: Salon Glanz" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="portfolio-meta">
+            <div>
+              <h3>💇 Salon Glanz</h3>
+              <p>Friseursalon &ndash; Termin- und Leistungsübersicht mit Preisliste.</p>
+            </div>
+            <a class="btn btn-text" href="../friseur-glanz/index.html" target="_blank" rel="noopener">Live ansehen &rarr;</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card">
+          <div class="preview-frame">
+            <iframe src="../handwerker-allround/index.html" title="Live-Vorschau: Handwerk Bergmann" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="portfolio-meta">
+            <div>
+              <h3>🛠️ Handwerk Bergmann</h3>
+              <p>Handwerksbetrieb &ndash; Leistungen, Referenzen und Anfrageformular.</p>
+            </div>
+            <a class="btn btn-text" href="../handwerker-allround/index.html" target="_blank" rel="noopener">Live ansehen &rarr;</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card">
+          <div class="preview-frame">
+            <iframe src="../hundeschule-wuffi/index.html" title="Live-Vorschau: Hundeschule Wuffi" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="portfolio-meta">
+            <div>
+              <h3>🐾 Hundeschule Wuffi</h3>
+              <p>Hundeschule &ndash; Kursübersicht mit Bildergalerie und Anmeldung.</p>
+            </div>
+            <a class="btn btn-text" href="../hundeschule-wuffi/index.html" target="_blank" rel="noopener">Live ansehen &rarr;</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card">
+          <div class="preview-frame">
+            <iframe src="../ristorante-la-piazza/index.html" title="Live-Vorschau: La Piazza" loading="lazy" tabindex="-1"></iframe>
+          </div>
+          <div class="portfolio-meta">
+            <div>
+              <h3>🍕 La Piazza</h3>
+              <p>Ristorante &amp; Pizzeria &ndash; Speisekarte, Ambiente und Tischreservierung.</p>
+            </div>
+            <a class="btn btn-text" href="../ristorante-la-piazza/index.html" target="_blank" rel="noopener">Live ansehen &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="ablauf">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>Ablauf</p>
+      <h2>Von der Idee zum Launch</h2>
+
+      <div class="service-list">
+        <div class="service-row">
+          <span class="service-index">01</span>
+          <div class="service-body">
+            <h3>Beratung</h3>
+            <p>Wir besprechen Ihre Ziele, Zielgruppe und Wünsche &ndash; unverbindlich und kostenlos.</p>
+          </div>
+          <span class="service-icon">💬</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">02</span>
+          <div class="service-body">
+            <h3>Konzept &amp; Design</h3>
+            <p>Sie erhalten einen Design-Entwurf, den wir gemeinsam verfeinern &ndash; ganz nach Ihrem Geschmack.</p>
+          </div>
+          <span class="service-icon">✏️</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">03</span>
+          <div class="service-body">
+            <h3>Umsetzung</h3>
+            <p>Wir setzen die Website technisch um &ndash; sauber, schnell und für alle Geräte optimiert.</p>
+          </div>
+          <span class="service-icon">💻</span>
+        </div>
+        <div class="service-row">
+          <span class="service-index">04</span>
+          <div class="service-body">
+            <h3>Launch &amp; Hosting</h3>
+            <p>Wir bringen Ihre Seite online und übernehmen Hosting, Wartung und Support &ndash; dauerhaft.</p>
+          </div>
+          <span class="service-icon">🚀</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="preise">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>Preise</p>
+      <h2>Transparent &amp; fair kalkuliert</h2>
+      <p class="section-intro">Richtpreise &ndash; der genaue Umfang hängt von Ihrem Projekt ab und wird vorab gemeinsam besprochen.</p>
+
+      <div class="price-columns">
+        <div class="price-row">
+          <span class="price-name">Landingpage (1 Seite)</span>
+          <span class="price-value">ab 590 €</span>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Business-Website (bis 6 Seiten)</span>
+          <span class="price-value">ab 1.290 €</span>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Onlineshop</span>
+          <span class="price-value">ab 2.490 €</span>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Redesign bestehender Website</span>
+          <span class="price-value">ab 890 €</span>
+        </div>
+        <div class="price-row">
+          <span class="price-name">Hosting &amp; Wartung</span>
+          <span class="price-value">ab 19 €/Monat</span>
+        </div>
+        <div class="price-row">
+          <span class="price-name">SEO-Grundpaket</span>
+          <span class="price-value">ab 190 € einmalig</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="stimmen">
+      <p class="eyebrow"><span class="eyebrow-mark"></span>Stimmen</p>
+      <h2>Das sagen unsere Kunden</h2>
+
+      <div class="quote-stack">
+        <blockquote class="quote quote-lg">
+          <p>patsite.de hat unsere Website von Grund auf neu gedacht &ndash; seitdem bekommen wir spürbar mehr Anfragen.</p>
+          <cite>&ndash; Inhaberin, Salon Glanz</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>Von der ersten Skizze bis zum Hosting lief alles aus einer Hand. Genau das haben wir gesucht.</p>
+          <cite>&ndash; Handwerk Bergmann</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>Unsere Kursanfragen kommen jetzt direkt über die neue Seite rein. Einfach, schnell, zuverlässig.</p>
+          <cite>&ndash; Hundeschule Wuffi</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="kontakt">
+      <div class="contact-head">
+        <p class="eyebrow"><span class="eyebrow-mark"></span>Kontakt</p>
+        <h2>Bereit für Ihre neue Website?</h2>
+        <p class="section-intro">Schreiben Sie uns kurz Ihr Anliegen &ndash; wir melden uns zeitnah mit einem unverbindlichen Angebot.</p>
+        <ul class="pill-list">
+          <li>📍 Musterstraße 1, 12345 Musterstadt</li>
+          <li>📞 0123 / 456 789</li>
+          <li>✉️ hallo@patsite.de</li>
+          <li>🕒 Mo&ndash;Fr: 9&ndash;18 Uhr</li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Ihr Name">
+        </div>
+        <div class="form-row">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required placeholder="ihre@email.de">
+        </div>
+        <div class="form-row">
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Erzählen Sie uns kurz von Ihrem Projekt..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Anfrage senden</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> patsite.de &ndash; Alle Rechte vorbehalten.</p>
+      <nav class="footer-nav">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
