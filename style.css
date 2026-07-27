@@ -18,6 +18,13 @@
   --radius-md: 22px;
   --font-heading: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-weight-heading: 800;
+  --letter-spacing-heading: -0.02em;
+  --heading-transform: none;
+  --btn-transform: none;
+  --btn-letter-spacing: 0;
+  --border-w: 3px;
+  --sticker-rotate: -6deg;
   --sidebar-width: 268px;
   --topbar-height: 64px;
 }
@@ -41,6 +48,10 @@
   --radius-sm: 8px;
   --radius-md: 14px;
   --font-heading: Georgia, 'Times New Roman', serif;
+  --font-weight-heading: 700;
+  --letter-spacing-heading: 0em;
+  --border-w: 2px;
+  --sticker-rotate: -3deg;
 }
 
 /* ===== Theme: Sunset ===== */
@@ -61,7 +72,11 @@
   --hard-shadow: 10px 10px 0 var(--color-accent);
   --radius-sm: 16px;
   --radius-md: 30px;
-  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --font-weight-heading: 800;
+  --letter-spacing-heading: -0.01em;
+  --border-w: 4px;
+  --sticker-rotate: -9deg;
 }
 
 /* ===== Theme: Mono ===== */
@@ -79,10 +94,17 @@
   --color-border: #E1E1E6;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 10px 24px rgba(0, 0, 0, 0.10);
-  --hard-shadow: 6px 6px 0 var(--color-border);
+  --hard-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
   --radius-sm: 4px;
   --radius-md: 6px;
-  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'Arial Narrow', Arial, Helvetica, sans-serif;
+  --font-weight-heading: 700;
+  --letter-spacing-heading: 0.01em;
+  --heading-transform: uppercase;
+  --btn-transform: uppercase;
+  --btn-letter-spacing: 0.06em;
+  --border-w: 1px;
+  --sticker-rotate: 0deg;
 }
 :root[data-theme="mono"] .eyebrow { letter-spacing: 0.22em; }
 
@@ -104,7 +126,11 @@
   --hard-shadow: 10px 10px 0 var(--color-accent-light);
   --radius-sm: 14px;
   --radius-md: 26px;
-  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-heading: 'Bookman Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-weight-heading: 700;
+  --letter-spacing-heading: 0em;
+  --border-w: 3px;
+  --sticker-rotate: -4deg;
 }
 
 /* ===== Theme: Neon ===== */
@@ -122,13 +148,18 @@
   --color-border: #23233C;
   --shadow-sm: 0 0 12px rgba(0, 229, 255, 0.25);
   --shadow-md: 0 0 30px rgba(255, 46, 204, 0.3);
-  --hard-shadow: 8px 8px 0 var(--color-accent);
+  --hard-shadow: 0 0 26px rgba(255, 46, 204, 0.45);
   --radius-sm: 2px;
   --radius-md: 2px;
   --font-heading: 'Consolas', 'Courier New', monospace;
+  --font-weight-heading: 700;
+  --letter-spacing-heading: 0.04em;
+  --heading-transform: uppercase;
+  --btn-transform: uppercase;
+  --btn-letter-spacing: 0.08em;
+  --border-w: 1px;
+  --sticker-rotate: 0deg;
 }
-:root[data-theme="neon"] h1,
-:root[data-theme="neon"] h2 { text-transform: uppercase; letter-spacing: 0.04em; }
 
 /* ===== Reset ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -146,7 +177,13 @@ ul { list-style: none; }
 button { font: inherit; cursor: pointer; border: none; background: none; }
 em { font-style: italic; color: var(--color-primary); }
 
-h1, h2, h3 { font-family: var(--font-heading); line-height: 1.1; letter-spacing: -0.01em; }
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: 1.1;
+  letter-spacing: var(--letter-spacing-heading);
+  text-transform: var(--heading-transform);
+}
 h2 { font-size: clamp(2rem, 3.4vw, 2.9rem); margin-bottom: 32px; max-width: 16ch; }
 h3 { font-size: 1.25rem; margin-bottom: 8px; }
 
@@ -182,6 +219,10 @@ body, .sidebar, .topbar, .btn, .contact-form, .portfolio-card, .swatch-card,
   transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease,
     box-shadow 0.45s ease, outline-color 0.45s ease;
 }
+/* Note: border-width and transform are intentionally NOT transitioned here.
+   Chromium/WebKit fail to animate properties whose value only changes via an
+   inherited custom property (var()) update rather than a direct rule change,
+   so they'd silently freeze at the old value instead of switching at all. */
 
 /* ===== Buttons ===== */
 .btn {
@@ -192,6 +233,8 @@ body, .sidebar, .topbar, .btn, .contact-form, .portfolio-card, .swatch-card,
   border-radius: var(--radius-sm);
   font-weight: 600;
   font-size: 0.95rem;
+  text-transform: var(--btn-transform);
+  letter-spacing: var(--btn-letter-spacing);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 .btn-primary {
@@ -329,9 +372,9 @@ body, .sidebar, .topbar, .btn, .contact-form, .portfolio-card, .swatch-card,
   justify-content: center;
   font-size: 4.2rem;
   background: var(--color-primary-light);
-  border: 3px solid var(--color-text);
+  border: var(--border-w) solid var(--color-text);
   border-radius: var(--radius-md);
-  transform: rotate(-6deg);
+  transform: rotate(var(--sticker-rotate));
   box-shadow: var(--hard-shadow);
 }
 
@@ -541,7 +584,7 @@ body, .sidebar, .topbar, .btn, .contact-form, .portfolio-card, .swatch-card,
 }
 .contact-form {
   background: var(--color-surface);
-  border: 3px solid var(--color-text);
+  border: var(--border-w) solid var(--color-text);
   border-radius: var(--radius-md);
   padding: 32px;
   box-shadow: var(--hard-shadow);
