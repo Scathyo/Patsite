@@ -48,6 +48,7 @@ const THEMES = [
   { key: 'mono', name: 'Mono', desc: 'Klar & corporate' },
   { key: 'forest', name: 'Forest', desc: 'Natürlich & organisch' },
   { key: 'neon', name: 'Neon', desc: 'Mutig & futuristisch' },
+  { key: 'poster', name: 'Poster', desc: 'Laut & plakativ' },
 ];
 const AUTOPLAY_MS = 6000;
 

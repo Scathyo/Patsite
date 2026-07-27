@@ -5,14 +5,14 @@ Eine One-Page-Website für eine fiktive Webagentur ("patsite.de"), die Websites 
 ## Struktur
 
 - `index.html` – Seiteninhalt (Hero, Designs, Leistungen, Referenzen, Ablauf, Preise, Stimmen, Kontakt)
-- `style.css` – Sechs komplette Themes (Aurora, Midnight, Sunset, Mono, Forest, Neon) als CSS-Variablen-Sets, Sidebar-Navigation, plus Layout für die rechtlichen Seiten
+- `style.css` – Sieben komplette Themes (Aurora, Midnight, Sunset, Mono, Forest, Neon, Poster) als CSS-Variablen-Sets, Sidebar-Navigation, plus Layout für die rechtlichen Seiten
 - `script.js` – Design-Cycler (wechselt live durch alle Themes), mobiles Drawer-Menü, Scroll-Spy-Navigation und Kontaktformular (Demo, ohne Backend)
 - `impressum.html` – Impressum gemäß § 5 Digitale-Dienste-Gesetz (DDG)
 - `datenschutz.html` – Datenschutzerklärung gemäß DSGVO/TTDSG, inkl. Abschnitt zur KI-gestützten Bearbeitung von Kontaktanfragen
 
 ## Design-Cycler
 
-Im Abschnitt „Designs" lässt sich das komplette Erscheinungsbild der Seite live umschalten – per Pfeil-Buttons, per Klick auf eine der sechs Design-Kacheln oder automatisch alle 6 Sekunden (pausiert automatisch, während das Kontaktformular ausgefüllt wird oder der Tab inaktiv ist).
+Im Abschnitt „Designs" lässt sich das komplette Erscheinungsbild der Seite live umschalten – per Pfeil-Buttons, per Klick auf eine der sieben Design-Kacheln oder automatisch alle 6 Sekunden (pausiert automatisch, während das Kontaktformular ausgefüllt wird oder der Tab inaktiv ist). „Poster" ist bewusst ein Bruch mit den anderen sechs: Papier-Hintergrund, durchgezogene Tinten-Ränder, harte Offset-Schatten statt Blur und großgeschriebene Arial-Black-Headlines statt der sonst üblichen weichen Karten-Optik.
 
 ## Referenzen
 

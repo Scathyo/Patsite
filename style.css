@@ -161,6 +161,44 @@
   --sticker-rotate: 0deg;
 }
 
+/* ===== Theme: Poster ===== */
+/* Print-poster / neobrutalist look: paper background, solid ink borders,
+   hard offset shadows instead of blur, all-caps display type. Deliberately
+   breaks the "soft card" language the other six themes share. */
+:root[data-theme="poster"] {
+  --color-bg: #FBF1DC;
+  --color-bg-alt: #F4E4BE;
+  --color-surface: #FFFCF5;
+  --color-text: #201A16;
+  --color-text-soft: #5E5045;
+  --color-primary: #E3452C;
+  --color-primary-dark: #B92F1B;
+  --color-primary-light: #FBD7C9;
+  --color-accent: #F2B705;
+  --color-accent-light: #FCE9AE;
+  --color-border: #201A16;
+  --shadow-sm: 3px 3px 0 var(--color-text);
+  --shadow-md: 6px 6px 0 var(--color-text);
+  --hard-shadow: 10px 10px 0 var(--color-accent);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --font-heading: 'Arial Black', 'Segoe UI Black', Impact, 'Helvetica Neue', sans-serif;
+  --font-weight-heading: 900;
+  --letter-spacing-heading: -0.01em;
+  --heading-transform: uppercase;
+  --btn-transform: uppercase;
+  --btn-letter-spacing: 0.05em;
+  --border-w: 4px;
+  --sticker-rotate: -8deg;
+}
+:root[data-theme="poster"] body {
+  background-color: var(--color-bg);
+  background-image: radial-gradient(color-mix(in srgb, var(--color-text) 10%, transparent) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+:root[data-theme="poster"] .btn-primary:hover,
+:root[data-theme="poster"] .control-btn:hover { transform: translate(-3px, -3px); }
+
 /* ===== Reset ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
