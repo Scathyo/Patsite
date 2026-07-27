@@ -16,14 +16,14 @@ Im Abschnitt „Designs" lässt sich das komplette Erscheinungsbild der Seite li
 
 ## Referenzen
 
-Die Referenzen-Kacheln laden die Nachbarprojekte im gleichen `webs`-Ordner als Live-Vorschau per `<iframe>`:
+Die Referenzen-Kacheln laden die live gehosteten GitHub-Pages-Versionen der Projekte als Vorschau per `<iframe>` und verlinken dorthin:
 
-- `../friseur-glanz/index.html`
-- `../handwerker-allround/index.html`
-- `../hundeschule-wuffi/index.html`
-- `../ristorante-la-piazza/index.html`
-
-Diese Ordner müssen also als Geschwisterordner erhalten bleiben, damit die Vorschauen funktionieren.
+- [Salon Glanz](https://scathyo.github.io/Friseur-Glanz/)
+- [Handwerk Bergmann](https://scathyo.github.io/Handwerk-Bergmann/)
+- [Hundeschule Wuffi](https://scathyo.github.io/Hundeschule-Wuffi/)
+- [La Piazza](https://scathyo.github.io/La-Piazza/)
+- [Café Morgenrot](https://scathyo.github.io/Cafe/)
+- [Kanzlei Berger](https://scathyo.github.io/Anwalt/)
 
 ## Rechtliche Seiten
 
