@@ -534,9 +534,10 @@ body, .site-header, .mobile-nav, .btn, .contact-form, .portfolio-card, .swatch-c
 /* ===== Referenzen / Portfolio ===== */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
-  margin-top: 8px;
+  max-width: 1160px;
+  margin: 8px auto 0;
 }
 .portfolio-card {
   background: var(--color-surface);
@@ -671,12 +672,17 @@ body, .site-header, .mobile-nav, .btn, .contact-form, .portfolio-card, .swatch-c
   .designs-control { flex-wrap: wrap; max-width: 100%; }
 }
 
+@media (max-width: 780px) {
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; }
+}
+
 @media (max-width: 560px) {
   .section, .section-alt { padding: 56px 0; }
   .section-alt { padding: 56px 24px; }
   .service-row { flex-wrap: wrap; }
   .service-icon { order: -1; }
   .portfolio-meta { flex-direction: column; }
+  .portfolio-grid { grid-template-columns: 1fr; max-width: 420px; }
 }
 
 /* ===== Legal pages (Impressum / Datenschutz) ===== */
