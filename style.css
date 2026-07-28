@@ -429,7 +429,6 @@ body, .site-header, .mobile-nav, .btn, .contact-form, .portfolio-card, .swatch-c
 }
 .marquee-track {
   display: flex;
-  gap: 14px;
   white-space: nowrap;
   width: max-content;
   animation: scroll-left 26s linear infinite;
@@ -438,6 +437,12 @@ body, .site-header, .mobile-nav, .btn, .contact-form, .portfolio-card, .swatch-c
   font-size: 0.95rem;
   letter-spacing: 0.02em;
 }
+/* Spacing lives on each item (not as a track-level gap) so the duplicated
+   half is byte-for-byte identical in width to the first half. A gap on the
+   flex container gets counted an odd number of times across 24 items,
+   which put the -50% loop point a few pixels off and caused a visible
+   stutter instead of a seamless scroll. */
+.marquee-track span { margin-right: 14px; }
 @keyframes scroll-left {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
