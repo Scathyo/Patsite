@@ -10,46 +10,46 @@
 </head>
 <body>
 
-<div class="topbar" id="topbar">
-  <a class="logo" href="#top">
-    <span class="logo-mark">PS</span>
-    <span class="logo-text">patsite.de</span>
-  </a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false">
-    <span></span><span></span>
-  </button>
-</div>
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo logo-lg" href="#top">
+      <span class="logo-mark">PS</span>
+      <span class="logo-text">patsite<em>.de</em></span>
+    </a>
 
-<div class="overlay" id="overlay"></div>
-
-<div class="layout">
-
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-top">
-      <a class="logo" href="#top">
-        <span class="logo-mark">PS</span>
-        <span class="logo-text">patsite.de</span>
-      </a>
-      <p class="sidebar-tag">Webdesign &amp; Hosting aus einer Hand</p>
-    </div>
-
-    <nav class="side-nav" id="sideNav">
-      <a href="#designs" data-label="01">Designs</a>
-      <a href="#leistungen" data-label="02">Leistungen</a>
-      <a href="#referenzen" data-label="03">Referenzen</a>
-      <a href="#ablauf" data-label="04">Ablauf</a>
-      <a href="#preise" data-label="05">Preise</a>
-      <a href="#kontakt" data-label="06">Kontakt</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#designs">Designs</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#preise">Preise</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
 
-    <div class="sidebar-bottom">
-      <a href="#kontakt" class="btn btn-primary btn-block">Projekt anfragen</a>
-      <ul class="sidebar-meta">
-        <li>📍 Musterstraße 1, Musterstadt</li>
-        <li>📞 0123 / 456 789</li>
-      </ul>
+    <div class="header-actions">
+      <a href="#kontakt" class="btn btn-primary btn-sm">Projekt anfragen</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span>
+      </button>
     </div>
-  </aside>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#designs">Designs</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#referenzen">Referenzen</a>
+    <a href="#ablauf">Ablauf</a>
+    <a href="#preise">Preise</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#kontakt" class="btn btn-primary btn-block">Projekt anfragen</a>
+    <ul class="mobile-meta">
+      <li>📍 Musterstraße 1, Musterstadt</li>
+      <li>📞 0123 / 456 789</li>
+    </ul>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
 
   <main class="content" id="top">
 
@@ -445,7 +445,6 @@
     </footer>
 
   </main>
-</div>
 
 <script src="script.js"></script>
 </body>

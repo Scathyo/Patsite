@@ -5,7 +5,7 @@ Eine One-Page-Website für eine fiktive Webagentur ("patsite.de"), die Websites 
 ## Struktur
 
 - `index.html` – Seiteninhalt (Hero, Designs, Leistungen, Referenzen, Ablauf, Preise, Stimmen, Kontakt)
-- `style.css` – Sieben komplette Themes (Aurora, Midnight, Sunset, Mono, Forest, Neon, Poster) als CSS-Variablen-Sets, Sidebar-Navigation, plus Layout für die rechtlichen Seiten
+- `style.css` – Sieben komplette Themes (Aurora, Midnight, Sunset, Mono, Forest, Neon, Poster) als CSS-Variablen-Sets, sticky Header mit großem Logo und horizontaler Navigation, plus Layout für die rechtlichen Seiten
 - `script.js` – Design-Cycler (wechselt live durch alle Themes), mobiles Drawer-Menü, Scroll-Spy-Navigation und Kontaktformular (Demo, ohne Backend)
 - `impressum.html` – Impressum gemäß § 5 Digitale-Dienste-Gesetz (DDG)
 - `datenschutz.html` – Datenschutzerklärung gemäß DSGVO/TTDSG, inkl. Abschnitt zur KI-gestützten Bearbeitung von Kontaktanfragen
