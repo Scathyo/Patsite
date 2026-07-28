@@ -385,7 +385,6 @@ body, .sidebar, .topbar, .btn, .contact-form, .portfolio-card, .swatch-card,
 .content {
   margin-left: var(--sidebar-width);
   width: calc(100% - var(--sidebar-width));
-  max-width: 980px;
   padding: 0 64px;
 }
 .section { padding: 88px 0; border-top: 1px solid var(--color-border); }
@@ -556,13 +555,18 @@ body, .sidebar, .topbar, .btn, .contact-form, .portfolio-card, .swatch-card,
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--color-bg-alt);
+  container-type: inline-size;
 }
 .preview-frame iframe {
   position: absolute;
   top: 0; left: 0;
   width: 1120px;
   height: 840px;
-  transform: scale(0.286);
+  /* Iframe always renders at desktop width (1120px) so the embedded site
+     shows its full desktop layout, not its mobile breakpoint; the visual
+     scale then tracks the actual (fluid) container width via a container
+     query unit instead of a fixed factor, so it fills the box at any size. */
+  transform: scale(calc(100cqw / 1120px));
   transform-origin: 0 0;
   border: 0;
   pointer-events: none;
@@ -579,7 +583,7 @@ body, .sidebar, .topbar, .btn, .contact-form, .portfolio-card, .swatch-card,
 .portfolio-meta .btn-text { flex-shrink: 0; white-space: nowrap; }
 
 /* ===== Preise ===== */
-.price-columns { columns: 2; column-gap: 48px; margin-top: 8px; }
+.price-columns { columns: 2; column-gap: 48px; margin-top: 8px; max-width: 760px; }
 .price-row {
   display: flex;
   justify-content: space-between;
